@@ -3,7 +3,7 @@ Type: Package
 Title: Clean the Interactive Environment Except Some Variables
 Version: 0.1.0
 Author: Chat Wacharamanotham
-Maintainer: Chat Wacharamanotham <chat@ifi.uzh.ch>
+Maintainer: Chat Wacharamanotham <chat@acm.org>
 Description: Convenient functions to keep some variables from the
     interactive environment and clean the rest.
 License: MIT
