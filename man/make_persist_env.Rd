@@ -2,13 +2,13 @@
 % Please edit documentation in R/persist.R
 \name{make_persist_env}
 \alias{make_persist_env}
-\title{Get or create the persistent environment to store the persisted variable}
+\title{Create the persistent environment to store the persisted variable (internal)}
 \usage{
-make_persist_env(env_name = "__cleanslate")
+make_persist_env()
 }
 \value{
-the environment used by the package
+The environment used by the package
 }
 \description{
-Get or create the persistent environment to store the persisted variable
+Create the persistent environment to store the persisted variable (internal)
 }
