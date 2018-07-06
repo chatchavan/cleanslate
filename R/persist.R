@@ -27,7 +27,7 @@ persist <- function(a_var) {
 #' Get or create the persistent environment to store the persisted variable
 #' @export
 #' @return the environment used by the package
-make_persist_env <- function(env_name = "__persist") {
+make_persist_env <- function(env_name = "__cleanslate") {
   if (!(env_name %in% search())) {
     g <- new.env()
     attach(g, name = env_name)
