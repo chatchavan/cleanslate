@@ -4,7 +4,7 @@
 \alias{make_persist_env}
 \title{Get or create the persistent environment to store the persisted variable}
 \usage{
-make_persist_env(env_name = "__persist")
+make_persist_env(env_name = "__cleanslate")
 }
 \value{
 the environment used by the package
