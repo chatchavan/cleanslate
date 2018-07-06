@@ -1,3 +1,5 @@
+#' The environment name (internal)
+env_name <- "__cleanslate"
 
 #' Make a variable persistent
 #' @description
@@ -19,15 +21,15 @@
 #' # x is now not in the .GlobalEnv but still accessible
 persist <- function(a_var) {
   make_persist_env()
-  assign(deparse(substitute(a_var)), a_var, envir = as.environment("__persist"))
+  assign(deparse(substitute(a_var)), a_var, envir = as.environment(env_name))
   rm(list = deparse(substitute(a_var)), pos = ".GlobalEnv")
   invisible(NULL)
 }
 
-#' Get or create the persistent environment to store the persisted variable
-#' @export
-#' @return the environment used by the package
-make_persist_env <- function(env_name = "__cleanslate") {
+#' Create the persistent environment to store the persisted variable (internal)
+#'
+#' @return The environment used by the package
+make_persist_env <- function() {
   if (!(env_name %in% search())) {
     g <- new.env()
     attach(g, name = env_name)
